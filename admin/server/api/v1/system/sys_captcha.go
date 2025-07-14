@@ -56,6 +56,14 @@ func (b *BaseApi) Captcha(c *gin.Context) {
 		CaptchaLength: global.GVA_CONFIG.Captcha.KeyLong,
 		OpenCaptcha:   oc,
 	}, "验证码获取成功", c)
+// HealthCheck
+// @Tags      Base
+// @Summary   Health check endpoint
+// @Produce   application/json
+// @Success   200  {object}  response.Response{msg=string}  "Health check successful"
+// @Router    /base/health [get]
+func (b *BaseApi) HealthCheck(c *gin.Context) {
+    response.OkWithMessage("Server is healthy", c)
 }
 
 // 类型转换
