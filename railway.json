@@ -14,6 +14,7 @@
   "deploy": {
     "numReplicas": 1,
     "sleepApplication": false,
-    "restartPolicyType": "ON_FAILURE"
+    "restartPolicyType": "ON_FAILURE",
+    "startCommand": "npm start || python -m api || # Replace with your actual start command"
   }
 }
